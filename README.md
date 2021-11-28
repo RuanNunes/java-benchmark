@@ -12,3 +12,13 @@ init aplication micronaut
 ````shell
 make mn
 ````
+
+#Install all projects
+````shell
+make install && make native
+````
+
+#Run all projects in container
+````shell
+make up
+````
