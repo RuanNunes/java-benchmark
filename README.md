@@ -34,7 +34,7 @@ make mn
 
 #Install all projects
 ````shell
-make install && make native
+make install && make nativez
 ````
 
 #Run all projects in container

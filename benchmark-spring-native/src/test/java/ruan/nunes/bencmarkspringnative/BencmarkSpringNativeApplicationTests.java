@@ -1,10 +1,10 @@
-package ruan.nunes.benchmarkspring;
+package ruan.nunes.bencmarkspringnative;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BenchmarkSpringApplicationTests {
+class BencmarkSpringNativeApplicationTests {
 
 	@Test
 	void contextLoads() {

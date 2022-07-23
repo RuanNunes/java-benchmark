@@ -15,10 +15,13 @@ mn:
 ###########################
 install:
 	cd benchmark-quarkus && ./mvnw package && cd .. && cd benchmark-spring && ./mvnw package && cd .. && cd benchmark-micronaut && ./mvnw package
+	make spring-native
 
 native:
 	cd benchmark-quarkus && ./mvnw package -Pnative -Dquarkus.native.container-build=true
 
+spring-native:
+	cd benchmark-spring-native && mvn -Pnative -DskipTests package
 ###########################
 ##### up containers #######
 ###########################

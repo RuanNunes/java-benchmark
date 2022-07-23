@@ -1,13 +1,13 @@
-package ruan.nunes.benchmarkspring;
+package ruan.nunes.bencmarkspringnative;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BenchmarkSpringApplication {
+public class BencmarkSpringNativeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BenchmarkSpringApplication.class, args);
+		SpringApplication.run(BencmarkSpringNativeApplication.class, args);
 	}
 
 }
