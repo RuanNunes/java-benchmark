@@ -12,7 +12,7 @@ s:
 sd:
 	cd demo-spring && ./mvnw spring-boot:run
 sn:
-	cd demo-spring-native && ./mvnw native:compile -Pnative
+	cd demo-spring-native && ./mvnw native:compile -Pnative && ./target/demo-spring-native
 
 
 mn:
