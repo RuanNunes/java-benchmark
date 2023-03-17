@@ -3,9 +3,17 @@
 ###########################
 q:
 	cd benchmark-quarkus && ./mvnw quarkus:dev
-
+qd:
+	cd demo-quarkus && ./mvnw quarkus:dev
+qk:
+	cd demo-quarkus-kotlin && ./gradlew quarkusDev
 s:
 	cd benchmark-spring && ./mvnw spring-boot:run
+sd:
+	cd demo-spring && ./mvnw spring-boot:run
+sn:
+	cd demo-spring-native && ./mvnw native:compile -Pnative
+
 
 mn:
 	cd benchmark-micronaut && ./mvnw mn:run
