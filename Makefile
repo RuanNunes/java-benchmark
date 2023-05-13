@@ -2,28 +2,27 @@
 ##### Dev Commands ########
 ###########################
 q:
-	cd benchmark-quarkus && ./mvnw quarkus:dev
+	cd benchmark-quarkus && mvn quarkus:dev
 qd:
-	cd demo-quarkus && ./mvnw quarkus:dev
+	cd demo-quarkus && mvn quarkus:dev
 qk:
-	cd demo-quarkus-kotlin && ./gradlew quarkusDev
+	cd demo-quarkus-kotlin && gradle quarkusDev
 s:
-	cd benchmark-spring && ./mvnw spring-boot:run
+	cd benchmark-spring && mvn spring-boot:run
 sd:
-	cd demo-spring && ./mvnw spring-boot:run
+	cd demo-spring && mvn spring-boot:run
 sn:
-	cd demo-spring-native && ./mvnw native:compile -Pnative && ./target/demo-spring-native
+	cd demo-spring-native && mvn native:compile -Pnative && ./target/demo-spring-native
 
 
 mn:
-	cd benchmark-micronaut && ./mvnw mn:run
+	cd benchmark-micronaut && mvn mn:run
 
 ###########################
 ##### Install Commands ####
 ###########################
 install:
-	cd benchmark-quarkus && ./mvnw package && cd .. && cd benchmark-spring && ./mvnw package && cd .. && cd benchmark-micronaut && ./mvnw package
-	make spring-native
+	cd benchmark-quarkus && mvn package && cd .. && cd benchmark-spring && mvn package && cd .. && cd benchmark-micronaut && mvn package
 
 native:
 	cd benchmark-quarkus && ./mvnw package -Pnative -Dquarkus.native.container-build=true
