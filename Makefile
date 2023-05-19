@@ -25,7 +25,7 @@ install:
 	cd benchmark-quarkus && mvn package && cd .. && cd benchmark-spring && mvn package && cd .. && cd benchmark-micronaut && mvn package
 
 native:
-	cd benchmark-quarkus && ./mvnw package -Pnative -Dquarkus.native.container-build=true
+	cd benchmark-quarkus && mvn package -Pnative -Dquarkus.native.container-build=true
 
 spring-native:
 	cd benchmark-spring-native && mvn -Pnative -DskipTests package
@@ -46,3 +46,10 @@ up-q-j:
 
 up-q-g:
 	docker compose up --build -d quarkus.graalvm
+
+###############################
+##### build images container###
+###############################
+
+spring-c:
+	docker compose up --build spring.native.demo

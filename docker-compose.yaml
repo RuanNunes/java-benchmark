@@ -49,6 +49,16 @@ services:
         ports:
             - 8085:8080
 
+    spring.native.demo:
+        container_name: spring.native.demo
+        hostname: spring.native.demo
+        image: spring.native.demo
+        build:
+            context: ./demo-spring-native
+            dockerfile: Dockerfile
+        ports:
+            - 8090:8080
+
     micronaut.jvm:
         container_name: micronaut.jvm
         hostname: micronaut.jvm
