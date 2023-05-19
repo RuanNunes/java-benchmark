@@ -1,12 +1,17 @@
-###########################
-##### Dev Commands ########
-###########################
+##################################
+##### Dev Commands quarkus########
+##################################
 q:
-	cd benchmark-quarkus && mvn quarkus:dev
+	cd quarkus/benchmark-quarkus && mvn quarkus:dev
 qd:
-	cd demo-quarkus && mvn quarkus:dev
+	cd quarkus/demo-quarkus && mvn quarkus:dev
 qk:
-	cd demo-quarkus-kotlin && gradle quarkusDev
+	cd quarkus/demo-quarkus-kotlin && gradle quarkusDev
+
+qn:
+	cd quarkus/benchmark-quarkus && mvn package -Pnative -Dquarkus.native.container-build=true
+	cd quarkus/demo-quarkus && mvn package -Pnative -Dquarkus.native.container-build=true
+
 s:
 	cd benchmark-spring && mvn spring-boot:run
 sd:
@@ -24,8 +29,7 @@ mn:
 install:
 	cd benchmark-quarkus && mvn package && cd .. && cd benchmark-spring && mvn package && cd .. && cd benchmark-micronaut && mvn package
 
-native:
-	cd benchmark-quarkus && mvn package -Pnative -Dquarkus.native.container-build=true
+
 
 spring-native:
 	cd benchmark-spring-native && mvn -Pnative -DskipTests package
