@@ -28,7 +28,7 @@ spring-c:
 ##### Dev Commands Micronaut########
 ##################################
 mn:
-	cd benchmark-micronaut && mvn mn:run
+	cd micronaut/benchmark-micronaut && mvn mn:run
 
 ###########################
 ##### Install Commands ####
