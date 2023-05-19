@@ -1,5 +1,5 @@
 ##################################
-##### Dev Commands quarkus########
+##### Dev Commands Quarkus########
 ##################################
 q:
 	cd quarkus/benchmark-quarkus && mvn quarkus:dev
@@ -11,15 +11,22 @@ qk:
 qn:
 	cd quarkus/benchmark-quarkus && mvn package -Pnative -Dquarkus.native.container-build=true
 	cd quarkus/demo-quarkus && mvn package -Pnative -Dquarkus.native.container-build=true
-
+##################################
+##### Dev Commands Spring########
+##################################
 s:
-	cd benchmark-spring && mvn spring-boot:run
+	cd spring/benchmark-spring && mvn spring-boot:run
 sd:
-	cd demo-spring && mvn spring-boot:run
+	cd spring/demo-spring && mvn spring-boot:run
 sn:
-	cd demo-spring-native && mvn native:compile -Pnative && ./target/demo-spring-native
-
-
+	cd spring/demo-spring-native && mvn native:compile -Pnative && ./target/demo-spring-native
+spring-native:
+	cd spring/benchmark-spring-native && mvn -Pnative -DskipTests package
+spring-c:
+	docker compose up --build spring.native.demo
+##################################
+##### Dev Commands Micronaut########
+##################################
 mn:
 	cd benchmark-micronaut && mvn mn:run
 
@@ -31,8 +38,7 @@ install:
 
 
 
-spring-native:
-	cd benchmark-spring-native && mvn -Pnative -DskipTests package
+
 ###########################
 ##### up containers #######
 ###########################
@@ -51,9 +57,3 @@ up-q-j:
 up-q-g:
 	docker compose up --build -d quarkus.graalvm
 
-###############################
-##### build images container###
-###############################
-
-spring-c:
-	docker compose up --build spring.native.demo
