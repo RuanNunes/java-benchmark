@@ -1,6 +1,15 @@
 ##################################
 ##### Dev Commands Quarkus########
 ##################################
+i:
+	cd api && mvn install
+	cd api-gradle && chmod +x gradlew && ./gradlew build --warning-mode all
+	cd api-kotlin && chmod +x gradlew && ./gradlew build
+	cd api-maven && chmod +x mvnw &&  ./mvnw package
+	cd benchmark-quarkus && mvn install
+	cd demo-quarkus && mvn install
+	cd demo-quarkus-kotlin && chmod +x gradlew && ./gradlew build
+
 api-dev:
 	cd api && mvn quarkus:dev
 q:

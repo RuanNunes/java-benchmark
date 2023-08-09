@@ -1,6 +1,15 @@
 ##################################
+##### Dev Commands Quarkus########
+##################################
+qi:
+	cd quarkus && make i
+
+
+##################################
 ##### Dev Commands Spring########
 ##################################
+si:
+	cd spring && make i
 s:
 	cd spring/benchmark-spring && mvn spring-boot:run
 sd:
@@ -14,6 +23,8 @@ spring-c:
 ##################################
 ##### Dev Commands Micronaut########
 ##################################
+mi:
+	cd micronaut && make i
 mn:
 	cd micronaut/benchmark-micronaut && mvn mn:run
 
