@@ -1,17 +1,4 @@
 ##################################
-##### Dev Commands Quarkus########
-##################################
-q:
-	cd quarkus/benchmark-quarkus && mvn quarkus:dev
-qd:
-	cd quarkus/demo-quarkus && mvn quarkus:dev
-qk:
-	cd quarkus/demo-quarkus-kotlin && gradle quarkusDev
-
-qn:
-	cd quarkus/benchmark-quarkus && mvn package -Pnative -Dquarkus.native.container-build=true
-	cd quarkus/demo-quarkus && mvn package -Pnative -Dquarkus.native.container-build=true
-##################################
 ##### Dev Commands Spring########
 ##################################
 s:
