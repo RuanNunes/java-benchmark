@@ -31,8 +31,10 @@ mn:
 ###########################
 ##### Install Commands ####
 ###########################
-install:
-	cd benchmark-quarkus && mvn package && cd .. && cd benchmark-spring && mvn package && cd .. && cd benchmark-micronaut && mvn package
+i-all:
+	cd micronaut && make i
+	cd quarkus && make i
+	cd spring && make i
 
 
 
