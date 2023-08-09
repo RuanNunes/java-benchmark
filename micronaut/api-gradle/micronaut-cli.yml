@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: ruan.nunes
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [app-name, gradle, http-client-test, java, java-application, jetty-server, junit, logback, lombok, micronaut-aot, micronaut-build, openapi, properties, readme, serialization-jackson, shade, spring, spring-web, swagger-ui]
