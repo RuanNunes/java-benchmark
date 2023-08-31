@@ -1,0 +1,32 @@
+services:
+    quarkus.jvm.11:
+        container_name: quarkus.jvm.11
+        hostname: quarkus.jvm.11
+        image: quarkus.jvm.11
+        build:
+            context: java-11
+            dockerfile:  ./src/main/docker/Dockerfile.jvm
+        ports:
+            - 8080:8080
+
+    quarkus.graalvm.11:
+        container_name: quarkus.graalvm.11
+        hostname: quarkus.graalvm.11
+        image: quarkus.graalvm.11
+        build:
+            context: java-11
+            dockerfile: ./src/main/docker/Dockerfile.graalvm
+        ports:
+            - 8082:8080
+
+    quarkus.native.11:
+        container_name: quarkus.native.11
+        hostname: quarkus.native.11
+        image: quarkus.native.11
+        build:
+            context: java-11
+            dockerfile: ./src/main/docker/Dockerfile.native
+        ports:
+            - 8081:8080
+
+
