@@ -1,0 +1,61 @@
+services:
+    quarkus.jvm.11:
+        container_name: quarkus.jvm.11
+        hostname: quarkus.jvm.11
+        image: quarkus.jvm.11
+        build:
+            context: java-11
+            dockerfile:  ./src/main/docker/Dockerfile.jvm
+        ports:
+            - 8080:8080
+
+    quarkus.graalvm.11:
+        container_name: quarkus.graalvm.11
+        hostname: quarkus.graalvm.11
+        image: quarkus.graalvm.11
+        build:
+            context: java-11
+            dockerfile: ./src/main/docker/Dockerfile.graalvm
+        ports:
+            - 8081:8080
+
+    quarkus.native.11:
+        container_name: quarkus.native.11
+        hostname: quarkus.native.11
+        image: quarkus.native.11
+        build:
+            context: java-11
+            dockerfile: ./src/main/docker/Dockerfile.native
+        ports:
+            - 8082:8080
+
+    quarkus.jvm.17:
+        container_name: quarkus.jvm.17
+        hostname: quarkus.jvm.17
+        image: quarkus.jvm.17
+        build:
+            context: java-17
+            dockerfile: ./src/main/docker/Dockerfile.jvm
+        ports:
+            - 8083:8080
+
+    quarkus.graalvm.17:
+        container_name: quarkus.graalvm.17
+        hostname: quarkus.graalvm.17
+        image: quarkus.graalvm.17
+        build:
+            context: java-17
+            dockerfile: ./src/main/docker/Dockerfile.graalvm
+        ports:
+            - 8084:8080
+
+    quarkus.native.17:
+        container_name: quarkus.native.17
+        hostname: quarkus.native.17
+        image: quarkus.native.17
+        build:
+            context: java-17
+            dockerfile: ./src/main/docker/Dockerfile.native
+        ports:
+            - 8085:8080
+

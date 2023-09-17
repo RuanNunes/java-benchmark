@@ -41,13 +41,13 @@ install:
 ##### up containers #######
 ###########################
 up:
-	docker compose up --build -d
+	docker-compose up --build -d
 
 down:
 	docker compose down
 
 up-q-n:
-	docker compose up --build -d quarkus.native
+	docker-cmpose up --build -d quarkus.native
 
 up-q-j:
 	docker compose up --build -d quarkus.jvm
