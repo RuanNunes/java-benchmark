@@ -24,7 +24,7 @@ dependencies {
 }
 
 group = "ruan.nunes"
-version = "1.0.0-SNAPSHOT"
+version = "SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17

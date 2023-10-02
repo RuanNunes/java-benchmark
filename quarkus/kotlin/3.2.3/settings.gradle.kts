@@ -10,4 +10,4 @@ pluginManagement {
         id(quarkusPluginId) version quarkusPluginVersion
     }
 }
-rootProject.name="demo-quarkus-kotlin"
+rootProject.name="3.2.3"
