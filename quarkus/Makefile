@@ -2,7 +2,7 @@
 ##### Dev Commands Quarkus########
 ##################################
 i:
-	cd java-11 && mvn clean install && chmod +x ./mvnw && ./mvnw package -Pnative -Dquarkus.native.container-build=true
+	#cd java-11 && mvn clean install && chmod +x ./mvnw && ./mvnw package -Pnative -Dquarkus.native.container-build=true
 	cd java-17 && mvn clean install && chmod +x ./mvnw && ./mvnw package -Pnative -Dquarkus.native.container-build=true
 	cd api-gradle && chmod +x gradlew && ./gradlew build --warning-mode all
 	cd api-kotlin && chmod +x gradlew && ./gradlew build
