@@ -11,7 +11,6 @@ java17:
 	cd 17/3.4.1 && chmod +x gradlew && ./gradlew build && ./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
 kotlin-b:
 	cd kotlin/2.16.4 && chmod +x gradlew && ./gradlew build && ./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
-	cd kotlin/3.2.3 && chmod +x gradlew && ./gradlew build && ./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
 up:
 	docker-compose up --build -d
 down:

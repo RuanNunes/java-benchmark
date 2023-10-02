@@ -1,8 +1,8 @@
 ##################################
 ##### Dev Commands Quarkus########
 ##################################
-qi:
-	cd quarkus && make i
+qb:
+	cd quarkus && make java11 && make java17 && make kotlin-b
 
 
 ##################################
