@@ -34,7 +34,7 @@ services:
         hostname: quarkus.jvm.17
         image: quarkus.jvm.17
         build:
-            context: java-17
+            context: 17/3.0.3
             dockerfile: ./src/main/docker/Dockerfile.jvm
         ports:
             - 8083:8080
@@ -44,7 +44,7 @@ services:
         hostname: quarkus.graalvm.17
         image: quarkus.graalvm.17
         build:
-            context: java-17
+            context: 17/3.0.3
             dockerfile: ./src/main/docker/Dockerfile.graalvm
         ports:
             - 8084:8080
@@ -54,7 +54,7 @@ services:
         hostname: quarkus.native.17
         image: quarkus.native.17
         build:
-            context: java-17
+            context: 17/3.0.3
             dockerfile: ./src/main/docker/Dockerfile.native
         ports:
             - 8085:8080
