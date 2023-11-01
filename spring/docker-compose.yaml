@@ -1,0 +1,52 @@
+services:
+    spring.graalvm.17:
+        container_name: spring.graalvm.17
+        hostname: spring.graalvm.17
+        image: spring.graalvm.17
+        build:
+            context: ./3.0.4
+            dockerfile: ./src/main/docker/Dockerfile.graalvm
+        ports:
+            - 8090:8080
+
+    spring.jvm.17:
+        container_name: spring.jvm
+        hostname: spring.jvm
+        image: spring.jvm
+        build:
+            context: ./3.0.4
+            dockerfile: ./src/main/docker/Dockerfile.jvm
+        ports:
+            - 8091:8080
+
+#    spring.native.demo:
+#        container_name: spring.native.demo
+#        hostname: spring.native.demo
+#        image: spring.native.demo
+#        build:
+#            context: ./demo-spring-native
+#            dockerfile: Dockerfile
+#        ports:
+#            - 8090:8080
+
+#    micronaut.jvm:
+#        container_name: micronaut.jvm
+#        hostname: micronaut.jvm
+#        image: micronaut.jvm
+#        build:
+#            context: ./benchmark-micronaut
+#            dockerfile: ./src/main/docker/Dockerfile.jvm
+#        ports:
+#            - 8086:8080
+#
+#    micronaut.graalvm:
+#        container_name: micronaut.graalvm
+#        hostname: micronaut.graalvm
+#        image: micronaut.graalvm
+#        build:
+#            context: ./benchmark-micronaut
+#            dockerfile: ./src/main/docker/Dockerfile.graalvm
+#        ports:
+#            - 8087:8080
+
+

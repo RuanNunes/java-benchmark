@@ -1,0 +1,32 @@
+####
+# This Dockerfile is used in order to build a container that runs the Quarkus application in JVM mode
+#
+# Before building the container image run:
+#
+# ./mvnw package
+#
+# Then, build the image with:
+#
+# docker build -f src/main/docker/Dockerfile.jvm -t quarkus/benchmark-quarkus-jvm .
+#
+# Then run the container using:
+#
+# docker run -i --rm -p 8080:8080 quarkus/benchmark-quarkus-jvm
+#
+# If you want to include the debug port into your docker image
+# you will have to expose the debug port (default 5005) like this :  EXPOSE 8080 5005
+#
+# Then run the container using :
+#
+# docker run -i --rm -p 8080:8080 -p 5005:5005 -e JAVA_ENABLE_DEBUG="true" quarkus/benchmark-quarkus-jvm
+#
+###
+FROM ghcr.io/graalvm/jdk-community:17.0.8-ol9
+# We make four distinct layers so if there are application changes the library layers can be re-used
+COPY --chown=1001 /target/*.jar /app.jar
+COPY --chown=1001 src/main/docker/entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+EXPOSE 8080
+USER 1001
+ENTRYPOINT ["/entrypoint.sh"]
+
