@@ -1,0 +1,59 @@
+version: '3'
+services:
+  locust:
+    image: locust:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./logs:/tmp/
+    networks:
+      locust-nw:
+    ports:
+      - "8089:8089"
+
+
+#  master:
+#    image: locust:latest
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    environment:
+#      - "LOCUST_MODE=master"
+#      - "LOCUST_SCRIPT=/tasks/example.py"
+#      - "LOCUST_OPTS=--csv=/tmp/lt --headless --print-stats --run-time 10s --users 6 --spawn-rate 3"
+#
+#    env_file:
+#      - ./.env
+#    volumes:
+#      - ./tasks:/tasks/
+#      - ./logs:/tmp/
+#    networks:
+#      locust-nw:
+#    ports:
+#      - "8089:8089"
+#
+#  slave:
+#    image: locust:latest
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    environment:
+#      - "LOCUST_SCRIPT=/tasks/example.py"
+#      - "LOCUST_MODE=worker"
+#      - "LOCUST_MASTER_HOST=master"
+#      - "LOCUST_MASTER_BIND_PORT=5557"
+#      - "LOCUST_OPTS=--headless --worker --master-host=master"
+#    env_file:
+#      - ./.env
+#    volumes:
+#      - ./tasks:/tasks/
+#    networks:
+#      locust-nw:
+#    ports:
+#      - "8089"
+#    depends_on:
+#      - master
+
+networks:
+  locust-nw:
