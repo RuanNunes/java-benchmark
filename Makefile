@@ -2,7 +2,7 @@
 ##### Dev Commands Quarkus########
 ##################################
 qb:
-	cd quarkus && make java11 && make java17 && make kotlin-b
+	cd quarkus && make java21 && kotlin && make java17 && make java11
 
 
 ##################################
